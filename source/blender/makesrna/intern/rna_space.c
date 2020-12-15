@@ -4376,6 +4376,11 @@ static void rna_def_space_view3d(BlenderRNA *brna)
   RNA_def_struct_sdna(srna, "RegionView3D");
   RNA_def_struct_ui_text(srna, "3D View Region", "3D View region data");
 
+  prop = RNA_def_property(srna, "view", PROP_INT, PROP_NONE);
+  RNA_def_property_int_sdna(prop, NULL, "view");
+  RNA_def_property_ui_text(prop, "view", "Activate correct othrographic view");
+  RNA_def_property_update(prop, NC_SPACE | ND_SPACE_VIEW3D, "rna_RegionView3D_quadview_update");
+
   prop = RNA_def_property(srna, "lock_rotation", PROP_BOOLEAN, PROP_NONE);
   RNA_def_property_boolean_sdna(prop, NULL, "viewlock", RV3D_LOCK_ROTATION);
   RNA_def_property_ui_text(prop, "Lock", "Lock view rotation in side views");

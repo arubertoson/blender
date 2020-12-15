@@ -7,7 +7,8 @@
 set(WITH_PYTHON_MODULE       ON  CACHE BOOL "" FORCE)
 
 # install into the systems python dir
-set(WITH_INSTALL_PORTABLE    OFF CACHE BOOL "" FORCE)
+set(WITH_INSTALL_PORTABLE    ON CACHE BOOL "" FORCE)
+set(PNG_LIBRARY_RELEASE "/scratch/dev/github.com/arubertoson/lib/linux_centos7_x86_64/png/lib/libpng16.a")
 
 # no point int copying python into python
 set(WITH_PYTHON_INSTALL      OFF CACHE BOOL "" FORCE)
